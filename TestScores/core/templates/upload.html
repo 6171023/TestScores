@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <h1>Upload File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <p>PRECAUTIONS:</p>
+    <ol>
+        <li>Please ensure that you've put in the correct files for overwrite file and extract file.</li>
+        <li>Please ensure you've put in the right column alphabet.</li>
+        <li>Regarding overwrite file:</li>
+        <ul>
+            <li>Please ensure that the names and emails of all students are in sheet 'Attendance' Column B & H, respectively, Row 6 onwards.</li>
+            <li>Please ensure that the scores to input/overwrite are in sheet 'Test Scores' Row 7 onwards.</li>
+        </ul>
+        <li>Regarding extract file:</li>
+        <ul>
+            <li>Please ensure that the names and emails of all students are in sheet 'Test Takers' Column A~C (A&B-fullnames, C-email) Row 5 onwards.</li>
+            <li>Please ensure that the scores to extract are in sheet 'Test Takers' Column G Row 5 onwards.</li>
+        </ul>
+    </ol>
+</body>
+</html>

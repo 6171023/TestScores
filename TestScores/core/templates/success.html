@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Success</title>
+</head>
+<body>
+    <h1>The files were successfully uploaded and processed!</h1>
+    {% if download_link %}
+        <p>Your modified file is ready for download:</p>
+        <a href="{{ download_link }}" download>Download Modified File</a>
+        <p>Please check the file for instances where a student may not have a score overwritten due to mismatching emails in MasterSheet and Mettl Registration of the respective student.</p>
+    {% else %}
+        <p>Download link not available.</p>
+        <p>Please either try again and ensure you've put in everything correctly, or contact administrator.</p>
+    {% endif %}
+</body>
+</html>
